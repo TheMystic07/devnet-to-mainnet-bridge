@@ -4,6 +4,8 @@ import "./globals.css";
 import Providers from "../components/Providers";
 import "@solana/wallet-adapter-react-ui/styles.css";
 import Header from "../components/Header";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +40,8 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
+          <Analytics />
+          <SpeedInsights />
         </Providers>
       </body>
     </html>
