@@ -20,9 +20,9 @@ export default function SolanaLogo({ variant = "mark", size = 28, className }: P
       >
         <defs>
           <linearGradient id="solanaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#14F195" />
-            <stop offset="50%" stopColor="#59FFA5" />
-            <stop offset="100%" stopColor="#9945FF" />
+            <stop offset="0%" stopColor="#7c3aed" />
+            <stop offset="50%" stopColor="#a855f7" />
+            <stop offset="100%" stopColor="#c084fc" />
           </linearGradient>
         </defs>
         <rect x="0" y="0" width="115" height="24" rx="8" fill="url(#solanaGrad)" />
