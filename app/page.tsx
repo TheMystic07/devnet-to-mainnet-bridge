@@ -168,7 +168,7 @@ export default function Home() {
           <label className="grid gap-2">
             <span className="text-sm text-white/70">Destination Mainnet Address</span>
             <input
-              className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 outline-none transition focus:border-[#14F195]"
+              className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 outline-none transition focus:border-purple-500"
               placeholder="Enter mainnet address"
               value={destination}
               onChange={(e) => setDestination(e.target.value.trim())}
@@ -178,7 +178,7 @@ export default function Home() {
           <label className="grid gap-2">
             <span className="text-sm text-white/70">Amount (Devnet SOL)</span>
             <input
-              className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 outline-none transition focus:border-[#14F195]"
+              className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 outline-none transition focus:border-purple-500"
               placeholder="1000000"
               value={amountDevnet}
               onChange={(e) => setAmountDevnet(e.target.value.replace(/[^0-9.]/g, ""))}
@@ -189,7 +189,7 @@ export default function Home() {
           </label>
 
             <div className="mt-1 flex flex-col gap-3 sm:flex-row">
-              <WalletMultiButton className="w-full sm:w-auto !bg-[#14F195] !text-black hover:!bg-[#3dffb1]" />
+              <WalletMultiButton className="w-full sm:w-auto !bg-purple-600 !text-white hover:!bg-purple-700" />
               <AnimatedButton
                 disabled={isChecking || !publicKey || (devnetBalance ?? 0) < MIN_REQUIRED_DEVNET_SOL}
                 onClick={startBridge}
@@ -241,7 +241,7 @@ function AnimatedButton({ disabled, onClick, children }: { disabled?: boolean; o
       whileTap={{ scale: disabled ? 1 : 0.98 }}
       onClick={onClick}
       disabled={disabled}
-      className="relative overflow-hidden rounded-xl bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 px-6 py-3 font-semibold shadow-lg disabled:cursor-not-allowed disabled:opacity-50"
+      className="relative overflow-hidden rounded-xl bg-gradient-to-r from-purple-600 via-purple-500 to-purple-400 px-6 py-3 font-semibold shadow-lg disabled:cursor-not-allowed disabled:opacity-50"
     >
       <motion.span
         className="absolute inset-0 -z-10"
@@ -328,7 +328,7 @@ function BackgroundFX() {
         transition={{ duration: 6, repeat: Infinity }}
       />
       <motion.div
-        className="absolute bottom-0 left-0 h-[28rem] w-[28rem] rounded-full bg-[#14F195]/10 blur-[120px]"
+        className="absolute bottom-0 left-0 h-[28rem] w-[28rem] rounded-full bg-purple-500/10 blur-[120px]"
         animate={{ x: [0, 40, 0], y: [0, -20, 0], opacity: [0.15, 0.25, 0.15] }}
         transition={{ duration: 7, repeat: Infinity }}
       />
